@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<div class="article">
+		 	<h1>{{ name }}</h1>
+		 	<p>
+		 		<span>{{ age }}</span>
+		 	</p>
+		 	<div>
+		 		<span>like: {{ num }}</span>
+		 		<button v-on:click="likeArr">like</button>
+		 	</div>
+		 	<p v-bind:title="age">{{ ver }}</p>
+
+		 	<p v-if="isLogin">真</p>
+		 	<p v-else>假</p>
+
+
+		 	<div class="form">
+		 		<input type="text" v-model="myComment" />
+		 		<button @click="subComment">submit</button>
+		 	</div>
+
+
+		 	<div class="commnet">
+		 		<ul>
+		 			<li v-for="item of commentList" :key
+		 			="item.id">{{ item.content }}</li>
+		 		</ul>
+		 		
+		 	</div>
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@3.2.1/dist/vue.global.js"></script>
+</body>
+</html>

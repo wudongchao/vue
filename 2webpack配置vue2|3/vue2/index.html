@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="app">{{ daArr }}</div>
+
+
+	new Vue();
+
+	init 初始化函数和生命周期
+	beforeCreate
+	init 外部注入 和 数据双向绑定
+	created
+	ha's el  yes => template option no => mount
+	ha's template yes => 使用模版渲染函数 no => mount
+	beforemount
+	mounted
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script type="text/javascript">
+		
+		new Vue({
+			// el:'#app',
+			data: {
+				daArr: '数据'
+			}
+		})
+	</script>
+</body>
+</html>

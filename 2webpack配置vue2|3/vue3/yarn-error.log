@@ -1,0 +1,51 @@
+Arguments: 
+  /Users/wudongchao/.nvm/versions/node/v8.11.2/bin/node /Users/wudongchao/.nvm/versions/node/v8.11.2/bin/yarn add wabpack@4.44.2 webpack-cli@3.3.12 webpack-dev-server@3.11.2 -D
+
+PATH: 
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home//bin:/Users/wudongchao/.nvm/versions/node/v8.11.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  8.11.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmjs.org/wabpack: Not found
+      at Request.params.callback [as _callback] (/Users/wudongchao/.nvm/versions/node/v8.11.2/lib/node_modules/yarn/lib/cli.js:66927:18)
+      at Request.self.callback (/Users/wudongchao/.nvm/versions/node/v8.11.2/lib/node_modules/yarn/lib/cli.js:140586:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/Users/wudongchao/.nvm/versions/node/v8.11.2/lib/node_modules/yarn/lib/cli.js:141558:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/Users/wudongchao/.nvm/versions/node/v8.11.2/lib/node_modules/yarn/lib/cli.js:141480:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "vue3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "dependencies": {
+      "vue": "^3.2.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+</head>
+<body>
+
+	<!-- <div class="J_wrapper">
+		<p>结果：<span class="num"></span></p>
+		<input type="text" placeholder="请输入" />
+		<input type="text" placeholder="请输入" />
+		<div class="btn-wrapper">
+			<button data-method="plus"> + </button>
+			<button data-method="minus"> - </button>
+			<button data-method="div"> * </button>
+			<button data-method="mun"> / </button>
+		</div>
+	</div>
+ -->
+
+	<div id="app">
+		
+		<fa></fa>
+	</div>
+<!-- 
+	<script type="text/javascript">
+		
+		(function (doc) {
+
+
+			var oJ_wrapper = doc.getElementsByClassName('J_wrapper')[0],
+				ofInput = oJ_wrapper.getElementsByTagName('input')[0],
+				oSInput = oJ_wrapper.getElementsByTagName('input')[1],
+				oNum = oJ_wrapper.getElementsByClassName('num')[0];
+				oBtn = oJ_wrapper.getElementsByClassName('btn-wrapper')[0];
+
+
+			var init = function () {
+				bindEvent();
+
+
+			};
+
+			function bindEvent () {
+				oBtn.addEventListener('click', handlerBtnClick, false);
+			};
+
+			function handlerBtnClick (ev) {
+				var e = ev || window.event,
+					target = e.target || e.srcElemet;
+				var	tagName = target.tagName.toLowerCase();
+
+				if (tagName === 'button') {
+					var type = target.getAttribute('data-method');
+
+					var fValue = Number(ofInput.value.replace(/\s+/g, '')) || 0,
+						sValue = Number(oSInput.value.replace(/\s+/g, '')) || 0;
+
+
+					switch (type) {
+						case 'plus':
+						return oNum.innerText = fValue + sValue;
+						case 'minus':
+						return oNum.innerText = fValue - sValue;
+						case 'div':
+						return oNum.innerText = fValue * sValue;
+						case 'mun':
+						return oNum.innerText = fValue / sValue;
+						default:
+							break;
+					}
+				}
+			}; 
+
+			init ();
+
+		} (document))
+	</script>
+ -->
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+	<script type="text/javascript">
+		console.log(Vue)
+
+		const child = {
+			template: `<div>
+			
+				<slot name="header"></slot>
+				<slot content="这是子给父的值"></slot>
+			</div>`
+		};
+
+		Vue.component('fa', {
+			template: `<div>
+
+				<child>
+					<p slot="header">123</p>
+					<template slot-scope="props">
+						<p>{{ props.content }}</p>
+					</template>
+				</child>
+			</div>`,
+			components: {
+				'child': child
+			}		
+				
+			
+			
+		});
+
+
+
+		new Vue({
+			el: '#app',
+			
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<!-- <div class="creatApp">
+			{{title}}
+		</div> -->
+
+		<!-- 全局组件 -->
+		<div class="todo-list">
+			<div>
+				<todo-form @add-todo="addTodo"></todo-form>
+			</div>
+
+			<div>
+				<ul>
+					<todo-item v-for="item of todoList" :key="item.id" :todo="item" @change-completed="changeCompleted" @remove-todo="removeTodo"></todo-item>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="app-1">
+		<div class="test">{{ name }}</div>
+	</div>
+	<div id="app-2">
+		
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@3.2.1/dist/vue.global.js"></script>
+</body>
+</html>
